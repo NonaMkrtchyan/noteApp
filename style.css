@@ -16,7 +16,7 @@ body {
 #note_container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(auto-fill, 300px);
   gap: 40px;
   margin-top: 70px;
 }
