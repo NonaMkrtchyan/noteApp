@@ -10,15 +10,13 @@ function createNoteElement(id, content) {
 }
 
 function addNote() {
-
     const noteObj = {
         id: Math.floor(Math.random() * 10000),
         content: ""
     }
-
-    const noteElement = createNoteElement(noteObj.id, noteObj.content);
-    noteContainer.insertBefore(noteElement, btn);
     
+    const noteElement = createNoteElement(noteObj.id, noteObj.content);
+    noteContainer.insertBefore(noteElement, btn);   
 }
 
 btn.addEventListener('click', addNote)
