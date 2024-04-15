@@ -6,7 +6,14 @@ function createNoteElement(id, content) {
   element.classList.add("note");
   element.placeholder = "Empty Note";
   element.value = content;
+  
+  element.addEventListener('dblclick', () => {
+    noteContainer.removeChild(element);
+  })
+
   return element;
+
+
 }
 
 function addNote() {
@@ -14,7 +21,7 @@ function addNote() {
         id: Math.floor(Math.random() * 10000),
         content: ""
     }
-    
+
     const noteElement = createNoteElement(noteObj.id, noteObj.content);
     noteContainer.insertBefore(noteElement, btn);   
 }
